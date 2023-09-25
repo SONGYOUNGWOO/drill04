@@ -56,6 +56,7 @@ keydown = False
 x = TUK_WIDTH // 2
 y = TUK_HEIGHT // 2
 frame = 0
+frame2 = 0
 dirx = 0
 diry = 0
 
@@ -75,19 +76,19 @@ while running:
         y = TUK_HEIGHT
 
     if (right):
-        character.clip_draw(frame * 121, 120, 121, 120, x, y)
+        character.clip_draw(frame * 121, 120, 121, 120, x, y,120,120)
     elif (left):
-        character.clip_draw(frame * 121, 0, 121, 120, x, y)
+        character.clip_draw(frame * 121, 0, 121, 120, x, y,120,120)
     elif (up):
-        character.clip_draw(frame * 121, 121 * 3, 121, 120, x, y)
+        character.clip_draw(frame2 * 121, 121 * 3, 121, 120, x, y,120,120)
     elif (down):
-        character.clip_draw(frame * 121, 121 * 2, 121, 120, x, y)
+        character.clip_draw(frame2 * 121, 121 * 2, 121, 120, x, y,120,120)
     else:
-        character.clip_draw(121 * 2, 121 * 2, 121, 120, x, y)
+        character.clip_draw(121 * 2, 121 * 2, 121, 120, x, y,120,120)
 
     update_canvas()
     handle_events()
-    frame = (frame + 1) % 8
+    frame = (frame + 1) % 9
     x += dirx * 5
     y += diry * 5
     delay(0.01)
