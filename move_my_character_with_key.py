@@ -89,7 +89,7 @@ while running:
     update_canvas()
     handle_events()
     frame = (frame + 1) % 9
-    frame2 = (frame + 1) % 7
+    frame2 = (frame2 + 1) % 7
     x += dirx * 8
     y += diry * 8
     delay(0.03)
