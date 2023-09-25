@@ -63,6 +63,17 @@ def handle_events():
 
 while running:
 
+    if (right):
+        character.clip_draw(frame * 121, 120, 121, 120, x, y)
+    elif (left):
+        character.clip_draw(frame * 121, 0, 121, 120, x, y)
+    elif (up):
+        character.clip_draw(frame * 121, 121 * 3, 121, 120, x, y)
+    elif (down):
+        character.clip_draw(frame * 121, 121 * 2, 121, 120, x, y)
+    else:
+        character.clip_draw(121 * 2, 121 * 2, 121, 120, x, y)
+
     clear_canvas()
     update_canvas()
     handle_events()
