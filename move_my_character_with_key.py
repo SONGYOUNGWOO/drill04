@@ -76,22 +76,23 @@ while running:
         y = TUK_HEIGHT
 
     if (right):
-        character.clip_draw(frame * 121, 120, 121, 120, x, y,120,120)
+        character.clip_draw(frame * 121, 122, 121, 122, x, y,120,120)
     elif (left):
-        character.clip_draw(frame * 121, 0, 121, 120, x, y,120,120)
+        character.clip_draw(frame * 121, 0, 121, 122, x, y,120,120)
     elif (up):
-        character.clip_draw(frame2 * 121, 121 * 3, 121, 120, x, y,120,120)
+        character.clip_draw(frame2 * 121, 122 * 3, 121, 122, x, y,120,120)
     elif (down):
-        character.clip_draw(frame2 * 121, 121 * 2, 121, 120, x, y,120,120)
+        character.clip_draw(frame2 * 121, 122 * 2, 121, 122, x, y,120,120)
     else:
-        character.clip_draw(121 * 2, 121 * 2, 121, 120, x, y,120,120)
+        character.clip_draw(121 * 2, 122 * 2, 121, 122, x, y,120,120)
 
     update_canvas()
     handle_events()
     frame = (frame + 1) % 9
-    x += dirx * 5
-    y += diry * 5
-    delay(0.01)
+    frame2 = (frame + 1) % 7
+    x += dirx * 8
+    y += diry * 8
+    delay(0.03)
 
 close_canvas()
 
