@@ -63,6 +63,16 @@ def handle_events():
 
 while running:
 
+    if x < 0:
+        x = 0
+    elif x > TUK_WIDTH:
+        x = TUK_WIDTH
+
+    if y < 0:
+        y = 0
+    elif y > TUK_HEIGHT:
+        y = TUK_HEIGHT
+
     if (right):
         character.clip_draw(frame * 121, 120, 121, 120, x, y)
     elif (left):
